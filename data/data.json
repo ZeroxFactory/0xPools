@@ -1,0 +1,7 @@
+{
+  "name": "0xPools",
+  "tagline": "Liquidity Manager on PancakeSwap V3",
+  "description": "Create and manage one-sided liquidity positions paired with USDX on PancakeSwap V3.",
+  "copyright": "© 2026 0xPools. All rights reserved.",
+  "walletConnectProjectId": "c6ab725f4c01bc70002314d7e3375e95"
+}
