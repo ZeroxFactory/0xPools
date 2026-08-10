@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,12 +17,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <meta name="theme-color" content="#060818" />
-    <script type="module" crossorigin src="/assets/index-T19SCWCr.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DVMLMHKG.css">
+    <meta name="theme-color" content="#0b0e11" />
+    <script>
+      // Runs before first paint so a stored theme never flashes the default one.
+      (function () {
+        try {
+          var t = localStorage.getItem('0xpools-theme');
+          if (t !== 'dark' && t !== 'neon' && t !== 'light') t = 'dark';
+          document.documentElement.setAttribute('data-theme', t);
+          document.documentElement.style.colorScheme = t === 'light' ? 'light' : 'dark';
+          var c = t === 'light' ? '#ffffff' : t === 'neon' ? '#060818' : '#0b0e11';
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute('content', c);
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-mZ8Dm2vB.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-Bu8a1GJl.js">
+    <link rel="modulepreload" crossorigin href="/assets/ethers-BmddDHhq.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-BeTXbt44.css">
   </head>
   <body>
     <noscript>
